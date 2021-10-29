@@ -1,10 +1,12 @@
 package recipes.Model;
 
-import lombok.Getter;
+import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
-@Getter @Setter @NoArgsConstructor
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Recipe {
     String name;
     String description;
