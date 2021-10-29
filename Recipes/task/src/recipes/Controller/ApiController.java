@@ -13,7 +13,7 @@ public class ApiController {
 
     @PostMapping(path = "/api/recipe")
     public void postRecipe(@RequestBody Recipe recipe){
-        currentRecipe = new Recipe(recipe.getName(), recipe.getDescription(), recipe.getIngredients(), recipe.getDirections());
+        currentRecipe = recipe;
     }
 
     @GetMapping(path = "/api/recipe")
