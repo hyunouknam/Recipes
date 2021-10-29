@@ -3,7 +3,9 @@
   <component name="NewModuleRootManager">
     <output-test url="file://$MODULE_DIR$/../../../../Recipes/task/out/test/classes" />
     <exclude-output />
-    <content url="file://$MODULE_DIR$/../../../../Recipes/task/src/test" />
+    <content url="file://$MODULE_DIR$/../../../../Recipes/task/src/test">
+      <sourceFolder url="file://$MODULE_DIR$/../../../../Recipes/task/src/test/generated_tests" isTestSource="true" generated="true" />
+    </content>
     <content url="file://$MODULE_DIR$/../../../../Recipes/task/test">
       <sourceFolder url="file://$MODULE_DIR$/../../../../Recipes/task/test" isTestSource="true" />
     </content>
@@ -13,7 +15,7 @@
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-web:2.3.1.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-actuator:2.3.1.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter:2.3.1.RELEASE" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.projectlombok:lombok:1.18.22" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.projectlombok:lombok:1.18.20" level="project" />
     <orderEntry type="library" name="Gradle: com.github.hyperskill:hs-test:release-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-json:2.3.1.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-tomcat:2.3.1.RELEASE" level="project" />

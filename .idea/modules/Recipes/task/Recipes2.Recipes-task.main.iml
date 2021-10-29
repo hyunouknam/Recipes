@@ -5,6 +5,7 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../../../Recipes/task/resources">
       <sourceFolder url="file://$MODULE_DIR$/../../../../Recipes/task/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../../Recipes/task/resources/generated" isTestSource="false" generated="true" />
     </content>
     <content url="file://$MODULE_DIR$/../../../../Recipes/task/src">
       <sourceFolder url="file://$MODULE_DIR$/../../../../Recipes/task/src" isTestSource="false" />
@@ -14,7 +15,7 @@
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-actuator:2.3.1.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-web:2.3.1.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter:2.3.1.RELEASE" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.projectlombok:lombok:1.18.22" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.projectlombok:lombok:1.18.20" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-actuator-autoconfigure:2.3.1.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: io.micrometer:micrometer-core:1.5.1" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-json:2.3.1.RELEASE" level="project" />
