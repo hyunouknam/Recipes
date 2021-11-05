@@ -300,6 +300,105 @@ files:
         }
     }
   learner_created: false
+- name: src/recipes/Model/Recipe.java
+  visible: true
+  text: |
+    package recipes.Model;
+
+    import com.fasterxml.jackson.annotation.JsonIgnore;
+
+    public class Recipe {
+        @JsonIgnore
+        int id;
+        String name;
+        String description;
+        String[] ingredients;
+        String[] directions;
+
+        public Recipe() {
+        }
+
+        public int getId() {
+            return id;
+        }
+
+        public void setId(int id) {
+            this.id = id;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public String getDescription() {
+            return description;
+        }
+
+        public void setDescription(String description) {
+            this.description = description;
+        }
+
+        public String[] getIngredients() {
+            return ingredients;
+        }
+
+        public void setIngredients(String[] ingredients) {
+            this.ingredients = ingredients;
+        }
+
+        public String[] getDirections() {
+            return directions;
+        }
+
+        public void setDirections(String[] directions) {
+            this.directions = directions;
+        }
+    }
+  learner_created: true
+- name: src/recipes/Controller/ApiController.java
+  visible: true
+  text: |
+    package recipes.Controller;
+
+    import org.springframework.http.HttpStatus;
+    import org.springframework.web.bind.annotation.*;
+    import org.springframework.web.server.ResponseStatusException;
+    import recipes.Model.Recipe;
+
+    import java.util.HashMap;
+    import java.util.Map;
+
+    @RestController
+    public class ApiController {
+
+        Map<Integer, Recipe> recipeMap = new HashMap<>();
+        int counter = 0;
+
+        @PostMapping(path = "/api/recipe/new")
+        public Map postRecipe(@RequestBody Recipe recipe){
+            counter++;
+            recipe.setId(counter);
+            recipeMap.put(counter, recipe);
+            return Map.of("id", counter);
+        }
+
+        @GetMapping(path = "/api/recipe/{id}")
+        public Recipe getRecipe(@PathVariable int id){
+            if(recipeMap.containsKey(id)) {
+                return recipeMap.get(id);
+            }
+
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+
+        }
+
+
+    }
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/180/stages/919/implement#comment
 status: Unchecked
-record: -1
+record: 3

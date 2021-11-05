@@ -1,9 +1,12 @@
 package recipes.Controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 import recipes.Model.Recipe;
+import recipes.Service.RecipeService;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -11,21 +14,18 @@ import java.util.Map;
 @RestController
 public class ApiController {
 
-    Map<Integer, Recipe> recipeMap = new HashMap<>();
-    int counter = 0;
+    @Autowired
+    RecipeService recipeService;
 
     @PostMapping(path = "/api/recipe/new")
-    public Map postRecipe(@RequestBody Recipe recipe){
-        counter++;
-        recipe.setId(counter);
-        recipeMap.put(counter, recipe);
-        return Map.of("id", counter);
+    public ResponseEntity<Map> postRecipe(@RequestBody Recipe recipe){
+        return new ResponseEntity<>(Map.of("id", recipeService.addRecipe(recipe)), HttpStatus.OK);
     }
 
     @GetMapping(path = "/api/recipe/{id}")
-    public Recipe getRecipe(@PathVariable int id){
-        if(recipeMap.containsKey(id)) {
-            return recipeMap.get(id);
+    public ResponseEntity<Recipe> getRecipe(@PathVariable int id){
+        if(recipeService.getRecipe(id) != null){
+            return new ResponseEntity<>(recipeService.getRecipe(id), HttpStatus.OK);
         }
 
         throw new ResponseStatusException(HttpStatus.NOT_FOUND);

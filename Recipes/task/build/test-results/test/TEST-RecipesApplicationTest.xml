@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="RecipesApplicationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-11-05T16:02:33" hostname="DESKTOP-TQV2K0M" time="4.435">
+<testsuite name="RecipesApplicationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-11-05T16:21:56" hostname="DESKTOP-TQV2K0M" time="4.347">
   <properties/>
-  <testcase name="start" classname="RecipesApplicationTest" time="4.435"/>
+  <testcase name="start" classname="RecipesApplicationTest" time="4.347"/>
   <system-out><![CDATA[?[1;31m
 Start test 1?[0m
 
@@ -13,20 +13,20 @@ Start test 1?[0m
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::        (v2.3.1.RELEASE)
 
-2021-11-05 12:02:34.865  INFO 19232 --- [    Test worker] recipes.RecipesApplication               : Starting RecipesApplication on DESKTOP-TQV2K0M with PID 19232 (started by pauln in C:\Users\pauln\Desktop\Recipes2\Recipes\task)
-2021-11-05 12:02:34.870  INFO 19232 --- [    Test worker] recipes.RecipesApplication               : No active profile set, falling back to default profiles: default
-2021-11-05 12:02:36.653  INFO 19232 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8881 (http)
-2021-11-05 12:02:36.665  INFO 19232 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-11-05 12:02:36.666  INFO 19232 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
-2021-11-05 12:02:36.799  INFO 19232 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-11-05 12:02:36.800  INFO 19232 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1851 ms
-2021-11-05 12:02:37.169  INFO 19232 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-11-05 12:02:37.524  INFO 19232 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
-2021-11-05 12:02:37.586  INFO 19232 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8881 (http) with context path ''
-2021-11-05 12:02:37.608  INFO 19232 --- [    Test worker] recipes.RecipesApplication               : Started RecipesApplication in 3.379 seconds (JVM running for 4.769)
-2021-11-05 12:02:38.035  INFO 19232 --- [nio-8881-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-11-05 12:02:38.038  INFO 19232 --- [nio-8881-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-11-05 12:02:38.049  INFO 19232 --- [nio-8881-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2021-11-05 12:21:57.725  INFO 18404 --- [    Test worker] recipes.RecipesApplication               : Starting RecipesApplication on DESKTOP-TQV2K0M with PID 18404 (started by pauln in C:\Users\pauln\Desktop\Recipes2\Recipes\task)
+2021-11-05 12:21:57.731  INFO 18404 --- [    Test worker] recipes.RecipesApplication               : No active profile set, falling back to default profiles: default
+2021-11-05 12:21:59.561  INFO 18404 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8881 (http)
+2021-11-05 12:21:59.576  INFO 18404 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-05 12:21:59.576  INFO 18404 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2021-11-05 12:21:59.705  INFO 18404 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-05 12:21:59.705  INFO 18404 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1904 ms
+2021-11-05 12:22:00.079  INFO 18404 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-05 12:22:00.430  INFO 18404 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2021-11-05 12:22:00.489  INFO 18404 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8881 (http) with context path ''
+2021-11-05 12:22:00.507  INFO 18404 --- [    Test worker] recipes.RecipesApplication               : Started RecipesApplication in 3.302 seconds (JVM running for 4.655)
+2021-11-05 12:22:00.948  INFO 18404 --- [nio-8881-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-05 12:22:00.950  INFO 18404 --- [nio-8881-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-11-05 12:22:00.960  INFO 18404 --- [nio-8881-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
 ?[1;31m
 Start test 2?[0m
 ?[1;31m
