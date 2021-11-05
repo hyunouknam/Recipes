@@ -14,14 +14,14 @@ public class RecipeService {
 
     int counter = 0;
 
-    public String addRecipe(Recipe recipe) {
+    public int addRecipe(Recipe recipe) {
         counter++;
-        recipe.setId(String.valueOf(counter));
+        recipe.setId(counter);
         recipeRepository.save(recipe);
-        return String.valueOf(counter);
+        return counter;
     }
 
-    public Optional<Recipe> getRecipe(String id) {
+    public Optional<Recipe> getRecipe(int id) {
         return recipeRepository.findById(id);
     }
 }

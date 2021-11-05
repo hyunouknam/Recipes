@@ -432,5 +432,57 @@ files:
   visible: true
   learner_created: true
 feedback_link: https://hyperskill.org/projects/180/stages/919/implement#comment
-status: Unchecked
+status: Failed
+feedback:
+  message: |-
+    Wrong answer in test #1
+
+    The JSON object at key id should be integer, found string
+
+    Full JSON:
+    {
+      &quot;id&quot;: &quot;1&quot;
+    }
+
+    Please find below the output of your program during this failed test.
+
+    ---
+
+    .   ____          _            __ _ _
+     /\\ / ___&#39;_ __ _ _(_)_ __  __ _ \ \ \ \
+    ( ( )\___ | &#39;_ | &#39;_| | &#39;_ \/ _` | \ \ \ \
+     \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+      &#39;  |____| .__|_| |_|_| |_\__, | / / / /
+     =========|_|==============|___/=/_/_/_/
+     :: Spring Boot ::        (v2.3.1.RELEASE)
+
+    2021-11-05 16:45:49.416  INFO 11780 --- [    Test worker] recipes.RecipesApplication               : Starting RecipesApplication on DESKTOP-TQV2K0M with PID 11780 (started by pauln in C:\Users\pauln\Desktop\Recipes2\Recipes\task)
+    2021-11-05 16:45:49.420  INFO 11780 --- [    Test worker] recipes.RecipesApplication               : No active profile set, falling back to default profiles: default
+    2021-11-05 16:45:50.754  INFO 11780 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+    2021-11-05 16:45:50.824  INFO 11780 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59ms. Found 1 JPA repository interfaces.
+    2021-11-05 16:45:51.677  INFO 11780 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8881 (http)
+    2021-11-05 16:45:51.694  INFO 11780 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+    2021-11-05 16:45:51.695  INFO 11780 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+    2021-11-05 16:45:51.879  INFO 11780 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+    2021-11-05 16:45:51.880  INFO 11780 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2394 ms
+    2021-11-05 16:45:52.047  INFO 11780 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+    2021-11-05 16:45:52.346  INFO 11780 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+    2021-11-05 16:45:52.358  INFO 11780 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at &#39;/h2-console&#39;. Database available at &#39;jdbc:h2:file:../recipes_db&#39;
+    2021-11-05 16:45:52.627  INFO 11780 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService &#39;applicationTaskExecutor&#39;
+    2021-11-05 16:45:52.699  INFO 11780 --- [         task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+    2021-11-05 16:45:52.752  WARN 11780 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+    2021-11-05 16:45:52.805  INFO 11780 --- [         task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.17.Final
+    2021-11-05 16:45:53.116  INFO 11780 --- [         task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+    2021-11-05 16:45:53.385  INFO 11780 --- [         task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+    2021-11-05 16:45:54.446  INFO 11780 --- [         task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+    2021-11-05 16:45:54.457  INFO 11780 --- [         task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit &#39;default&#39;
+    2021-11-05 16:45:54.528  INFO 11780 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path &#39;/actuator&#39;
+    2021-11-05 16:45:54.587  INFO 11780 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8881 (http) with context path &#39;&#39;
+    2021-11-05 16:45:54.589  INFO 11780 --- [    Test worker] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+    2021-11-05 16:45:54.861  INFO 11780 --- [    Test worker] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+    2021-11-05 16:45:54.875  INFO 11780 --- [    Test worker] recipes.RecipesApplication               : Started RecipesApplication in 5.967 seconds (JVM running for 7.316)
+    2021-11-05 16:45:55.340  INFO 11780 --- [nio-8881-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet &#39;dispatcherServlet&#39;
+    2021-11-05 16:45:55.341  INFO 11780 --- [nio-8881-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet &#39;dispatcherServlet&#39;
+    2021-11-05 16:45:55.354  INFO 11780 --- [nio-8881-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+  time: Fri, 05 Nov 2021 20:45:56 UTC
 record: 3
