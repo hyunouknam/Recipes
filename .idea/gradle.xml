@@ -12,6 +12,12 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/Recipes/task" />
+            <option value="$PROJECT_DIR$/Topics/The Map interface/Counting words" />
+            <option value="$PROJECT_DIR$/Topics/The Map interface/Creating a map" />
+            <option value="$PROJECT_DIR$/Topics/The Map interface/Displaying pairs" />
+            <option value="$PROJECT_DIR$/Topics/The Map interface/Modifying a map" />
+            <option value="$PROJECT_DIR$/Topics/The Map interface/Sherlock Holmes and the mystery of anagrams" />
+            <option value="$PROJECT_DIR$/Topics/The Map interface/Theory" />
             <option value="$PROJECT_DIR$/util" />
           </set>
         </option>

@@ -8,16 +8,22 @@
         <processorPath useClasspath="false">
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.16/6dc192c7f93ec1853f70d59d8a6dcf94eb42866/lombok-1.18.16.jar" />
         </processorPath>
-        <module name="Recipes2.util.test" />
-        <module name="Recipes2.util.main" />
-      </profile>
-      <profile name="Gradle Imported" enabled="true">
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="false">
-          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.20/18bcea7d5df4d49227b4a0743a536208ce4825bb/lombok-1.18.20.jar" />
-        </processorPath>
-        <module name="Recipes2.Recipes-task.main" />
+        <module name="Recipes2.Topics-The_Map_interface-Theory.main" />
+        <module name="Recipes2.Topics-The_Map_interface-Sherlock_Holmes_and_the_mystery_of_anagrams.test" />
         <module name="Recipes2.Recipes-task.test" />
+        <module name="Recipes2.Recipes-task.main" />
+        <module name="Recipes2.Topics-The_Map_interface-Creating_a_map.main" />
+        <module name="Recipes2.util.main" />
+        <module name="Recipes2.util.test" />
+        <module name="Recipes2.Topics-The_Map_interface-Displaying_pairs.test" />
+        <module name="Recipes2.Topics-The_Map_interface-Displaying_pairs.main" />
+        <module name="Recipes2.Topics-The_Map_interface-Modifying_a_map.test" />
+        <module name="Recipes2.Topics-The_Map_interface-Counting_words.main" />
+        <module name="Recipes2.Topics-The_Map_interface-Creating_a_map.test" />
+        <module name="Recipes2.Topics-The_Map_interface-Theory.test" />
+        <module name="Recipes2.Topics-The_Map_interface-Counting_words.test" />
+        <module name="Recipes2.Topics-The_Map_interface-Sherlock_Holmes_and_the_mystery_of_anagrams.main" />
+        <module name="Recipes2.Topics-The_Map_interface-Modifying_a_map.main" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="11" />
