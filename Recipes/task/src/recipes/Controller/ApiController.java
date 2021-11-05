@@ -1,9 +1,6 @@
 package recipes.Controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import recipes.Model.Recipe;
 
 import java.util.ArrayList;
@@ -13,21 +10,20 @@ import java.util.Map;
 @RestController
 public class ApiController {
 
-    Recipe currentRecipe;
     List<Recipe> recipeList = new ArrayList<>();
     int counter = 0;
 
     @PostMapping(path = "/api/recipe/new")
     public Map postRecipe(@RequestBody Recipe recipe){
         counter++;
-        currentRecipe = recipe;
+        recipe.setId(String.valueOf(counter));
         recipeList.add(recipe);
-        return Map.of("id", counter);
+        return Map.of("id", recipe.getId());
     }
 
-    @GetMapping(path = "/api/recipe")
-    public Recipe getRecipe(){
-        return currentRecipe;
+    @GetMapping(path = "/api/recipe/{id}")
+    public Recipe getRecipe(@PathVariable int id){
+        return recipeList.get(id - 1);
     }
 
 
