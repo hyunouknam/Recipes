@@ -1,6 +1,8 @@
 package recipes.Controller;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 import recipes.Model.Recipe;
 
 import java.util.ArrayList;
@@ -23,7 +25,12 @@ public class ApiController {
 
     @GetMapping(path = "/api/recipe/{id}")
     public Recipe getRecipe(@PathVariable int id){
-        return recipeList.get(id - 1);
+        try{
+            return recipeList.get(id - 1);
+        } catch (Exception e) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+        }
+
     }
 
 
