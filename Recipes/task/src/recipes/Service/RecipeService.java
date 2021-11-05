@@ -24,4 +24,12 @@ public class RecipeService {
     public Optional<Recipe> getRecipe(int id) {
         return recipeRepository.findById(id);
     }
+
+    public int deleteRecipe(int id) {
+        if(recipeRepository.existsById(id)) {
+            recipeRepository.delete(recipeRepository.findById(id).get());
+            return 0;
+        }
+        return -1;
+    }
 }
