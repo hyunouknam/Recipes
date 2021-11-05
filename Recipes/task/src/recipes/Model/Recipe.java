@@ -3,12 +3,15 @@ package recipes.Model;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Recipe {
     @JsonIgnore
     @Id
+    @GeneratedValue(strategy= GenerationType.SEQUENCE)
     int id;
     String name;
     String description;

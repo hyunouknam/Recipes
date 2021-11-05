@@ -12,13 +12,8 @@ public class RecipeService {
     @Autowired
     RecipeRepository recipeRepository;
 
-    int counter = 0;
-
     public int addRecipe(Recipe recipe) {
-        counter++;
-        recipe.setId(counter);
-        recipeRepository.save(recipe);
-        return counter;
+        return recipeRepository.save(recipe).getId();
     }
 
     public Optional<Recipe> getRecipe(int id) {
