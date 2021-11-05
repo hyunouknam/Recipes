@@ -1,25 +1,27 @@
 package recipes.Service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import recipes.Model.Recipe;
-
-import java.util.HashMap;
-import java.util.Map;
+import recipes.RecipeRepository;
+import java.util.Optional;
 
 @Service
 public class RecipeService {
 
-    Map<Integer, Recipe> recipeMap = new HashMap<>();
+    @Autowired
+    RecipeRepository recipeRepository;
+
     int counter = 0;
 
-    public int addRecipe(Recipe recipe) {
+    public String addRecipe(Recipe recipe) {
         counter++;
-        recipe.setId(counter);
-        recipeMap.put(counter, recipe);
-        return counter;
+        recipe.setId(String.valueOf(counter));
+        recipeRepository.save(recipe);
+        return String.valueOf(counter);
     }
 
-    public Recipe getRecipe(int id) {
-        return recipeMap.get(id);
+    public Optional<Recipe> getRecipe(String id) {
+        return recipeRepository.findById(id);
     }
 }

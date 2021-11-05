@@ -2,9 +2,14 @@ package recipes.Model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Recipe {
     @JsonIgnore
-    int id;
+    @Id
+    String id;
     String name;
     String description;
     String[] ingredients;
@@ -13,11 +18,11 @@ public class Recipe {
     public Recipe() {
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 

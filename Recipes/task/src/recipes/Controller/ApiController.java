@@ -22,13 +22,11 @@ public class ApiController {
     }
 
     @GetMapping(path = "/api/recipe/{id}")
-    public ResponseEntity<Recipe> getRecipe(@PathVariable int id){
-        if(recipeService.getRecipe(id) != null){
-            return new ResponseEntity<>(recipeService.getRecipe(id), HttpStatus.OK);
+    public ResponseEntity<Recipe> getRecipe(@PathVariable String id){
+        if(recipeService.getRecipe(id).isPresent()){
+            return new ResponseEntity<>(recipeService.getRecipe(id).get(), HttpStatus.OK);
         }
-
         throw new ResponseStatusException(HttpStatus.NOT_FOUND);
-
     }
 
 
