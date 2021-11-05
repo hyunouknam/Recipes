@@ -1,6 +1,9 @@
 package recipes.Model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 public class Recipe {
+    @JsonIgnore
     String id;
     String name;
     String description;
