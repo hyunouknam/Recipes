@@ -18,7 +18,7 @@ public class ApiController {
     @PostMapping(path = "/api/recipe/new")
     public Map postRecipe(@RequestBody Recipe recipe){
         counter++;
-        recipe.setId(String.valueOf(counter));
+        recipe.setId(counter);
         recipeList.add(recipe);
         return Map.of("id", recipe.getId());
     }
