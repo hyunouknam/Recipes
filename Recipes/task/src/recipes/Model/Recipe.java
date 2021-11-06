@@ -6,6 +6,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
 
 @Entity
 public class Recipe {
@@ -13,9 +16,15 @@ public class Recipe {
     @Id
     @GeneratedValue(strategy= GenerationType.SEQUENCE)
     int id;
+    @NotBlank
     String name;
+    @NotBlank
     String description;
+    @Size(min = 1)
+    @NotEmpty
     String[] ingredients;
+    @Size(min = 1)
+    @NotEmpty
     String[] directions;
 
     public Recipe() {
