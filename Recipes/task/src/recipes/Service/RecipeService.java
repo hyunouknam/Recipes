@@ -6,6 +6,7 @@ import recipes.Model.Recipe;
 import recipes.RecipeRepository;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -35,5 +36,9 @@ public class RecipeService {
             return 0;
         }
         return -1;
+    }
+
+    public List<Recipe> searchCategory(String category) {
+        return recipeRepository.findAllByCategoryIgnoreCaseOrderByDateDesc(category);
     }
 }

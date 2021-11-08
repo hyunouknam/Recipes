@@ -43,8 +43,10 @@ public class ApiController {
 
     @GetMapping(path = "/api/recipe/search")
     public ResponseEntity searchRecipe(@RequestParam(required = false) String category, @RequestParam(required = false) String name) {
-        if((StringUtils.isNotEmpty(category) && StringUtils.isEmpty(name))
-                || (StringUtils.isEmpty(category) && StringUtils.isNotEmpty(name))) {
+        if(StringUtils.isNotEmpty(category) && StringUtils.isEmpty(name)) {
+            return new ResponseEntity<>(recipeService.searchCategory(category), HttpStatus.OK);
+        } else if (StringUtils.isEmpty(category) && StringUtils.isNotEmpty(name)) {
+            //recipeService.searchName(name);
             return new ResponseEntity<>(HttpStatus.OK);
         }
         throw new ResponseStatusException(HttpStatus.BAD_REQUEST);
