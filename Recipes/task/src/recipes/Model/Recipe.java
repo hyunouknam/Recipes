@@ -9,6 +9,7 @@ import javax.persistence.Id;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
+import java.time.LocalDateTime;
 
 @Entity
 public class Recipe {
@@ -26,6 +27,9 @@ public class Recipe {
     @Size(min = 1)
     @NotEmpty
     String[] directions;
+    @NotBlank
+    String category;
+    LocalDateTime date;
 
     public Recipe() {
     }
@@ -68,5 +72,21 @@ public class Recipe {
 
     public void setDirections(String[] directions) {
         this.directions = directions;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public LocalDateTime getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDateTime date) {
+        this.date = date;
     }
 }
