@@ -22,6 +22,16 @@ public class ApiController {
         return new ResponseEntity<>(Map.of("id", recipeService.addRecipe(recipe)), HttpStatus.OK);
     }
 
+    @PutMapping(path = "/api/recipe/{id}")
+    public ResponseEntity putRecipe(@Valid @RequestBody Recipe recipe, @PathVariable int id){
+        if(recipeService.getRecipe(id).isPresent()){
+            recipeService.updateRecipe(recipe, id);
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+
+        throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+    }
+
     @GetMapping(path = "/api/recipe/{id}")
     public ResponseEntity getRecipe(@PathVariable int id){
         if(recipeService.getRecipe(id).isPresent()){
