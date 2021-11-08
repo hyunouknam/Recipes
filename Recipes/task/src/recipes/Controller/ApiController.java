@@ -1,5 +1,6 @@
 package recipes.Controller;
 
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,12 +19,12 @@ public class ApiController {
     RecipeService recipeService;
 
     @PostMapping(path = "/api/recipe/new")
-    public ResponseEntity postRecipe(@Valid @RequestBody Recipe recipe){
+    public ResponseEntity postRecipe(@Valid @RequestBody Recipe recipe) {
         return new ResponseEntity<>(Map.of("id", recipeService.addRecipe(recipe)), HttpStatus.OK);
     }
 
     @PutMapping(path = "/api/recipe/{id}")
-    public ResponseEntity putRecipe(@Valid @RequestBody Recipe recipe, @PathVariable int id){
+    public ResponseEntity putRecipe(@Valid @RequestBody Recipe recipe, @PathVariable int id) {
         if(recipeService.getRecipe(id).isPresent()){
             recipeService.updateRecipe(recipe, id);
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
@@ -33,11 +34,21 @@ public class ApiController {
     }
 
     @GetMapping(path = "/api/recipe/{id}")
-    public ResponseEntity getRecipe(@PathVariable int id){
+    public ResponseEntity getRecipe(@PathVariable int id) {
         if(recipeService.getRecipe(id).isPresent()){
             return new ResponseEntity<>(recipeService.getRecipe(id).get(), HttpStatus.OK);
         }
         throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+    }
+
+    @GetMapping(path = "/api/recipe/search")
+    public ResponseEntity searchRecipe(@RequestParam(required = false) String category, @RequestParam(required = false) String name) {
+        if((StringUtils.isNotEmpty(category) && StringUtils.isEmpty(name))
+                || (StringUtils.isEmpty(category) && StringUtils.isNotEmpty(name))) {
+            return new ResponseEntity<>(HttpStatus.OK);
+        }
+        throw new ResponseStatusException(HttpStatus.BAD_REQUEST);
+
     }
 
     @DeleteMapping(path = "/api/recipe/{id}")
