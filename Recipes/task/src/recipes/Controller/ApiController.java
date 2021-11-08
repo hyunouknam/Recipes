@@ -46,8 +46,7 @@ public class ApiController {
         if(StringUtils.isNotEmpty(category) && StringUtils.isEmpty(name)) {
             return new ResponseEntity<>(recipeService.searchCategory(category), HttpStatus.OK);
         } else if (StringUtils.isEmpty(category) && StringUtils.isNotEmpty(name)) {
-            //recipeService.searchName(name);
-            return new ResponseEntity<>(HttpStatus.OK);
+            return new ResponseEntity<>(recipeService.searchContainingName(name), HttpStatus.OK);
         }
         throw new ResponseStatusException(HttpStatus.BAD_REQUEST);
 
